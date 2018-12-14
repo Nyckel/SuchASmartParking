@@ -18,18 +18,20 @@ public class Main {
         HashMap<Integer, Character> readingMap = new HashMap<>();
         ParkingDataManager.setResourceMap(readingMap);
 
+        File folder = new File(sensorsfolder);
+
         // ADAPTATION
-        ScheduledExecutorService scheduledPool = Executors.newScheduledThreadPool(adaptators.size() + 2);
+        ScheduledExecutorService scheduledPool = Executors.newScheduledThreadPool(folder.listFiles().length + 2);
         Adaptator.setPool(scheduledPool);
 
         Runnable fileReader = new Runnable() {
             @Override
             public void run() {
                 try {
-                    File folder = new File(sensorsfolder);
+
                     for (File child : folder.listFiles())
                     {
-                        System.out.println(child.getName());
+//                        System.out.println(child.getName());
                         if (child.isFile() && !filesRead.contains(child.getName())) {
                             BufferedReader reader = new BufferedReader(new FileReader(child));
                             String line;

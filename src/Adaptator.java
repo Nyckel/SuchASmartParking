@@ -48,7 +48,7 @@ public class Adaptator implements Runnable {
     public void run() {
         try {
             char value = (char) reader.read();
-            System.out.println("Setting in stream" + id + " -> " + (value == '1' ? '1' : '0'));
+//            System.out.println("Setting in stream" + id + " -> " + (value == '1' ? '1' : '0'));
             stream.add(new Reading(this.id, value == '1' ? '1' : '0'));
         }
         catch (Exception e) {

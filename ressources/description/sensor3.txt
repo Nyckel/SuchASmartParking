@@ -1,1 +1,1 @@
-147 180 sensor3.txt
+147 18000 sensor3.txt
