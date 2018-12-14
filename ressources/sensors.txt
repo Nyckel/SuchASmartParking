@@ -1,0 +1,5 @@
+052 6 sensor1.txt
+659 13 sensor2.txt
+147 18 sensor3.txt
+559 38 sensor4.txt
+768 5 sensor5.txt
